@@ -1,0 +1,14 @@
+h1{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+// .fill-remaining-space {
+//     flex: 1 1 auto;
+// }
+
+ .hero {
+     background: url('https://assets.nflxext.com/ffe/siteui/vlv3/2528d8f4-b231-4bd1-9cde-d67b81f41d86/f111b42c-5f32-41b5-9a1b-e723ba5202a8/IL-en-20180528-popsignuptwoweeks-perspective_alpha_website_small.jpg" srcset="https://assets.nflxext.com/ffe/siteui/vlv3/2528d8f4-b231-4bd1-9cde-d67b81f41d86/f111b42c-5f32-41b5-9a1b-e723ba5202a8/IL-en-20180528-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/2528d8f4-b231-4bd1-9cde-d67b81f41d86/f111b42c-5f32-41b5-9a1b-e723ba5202a8/IL-en-20180528-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/2528d8f4-b231-4bd1-9cde-d67b81f41d86/f111b42c-5f32-41b5-9a1b-e723ba5202a8/IL-en-20180528-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w') no-repeat center fixed;
+     background-size: cover;
+     height: 100px;
+   }
+

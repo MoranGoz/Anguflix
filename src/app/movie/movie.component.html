@@ -1,0 +1,36 @@
+
+ <div class="movie-card">
+  <div class="list-container"> 
+      <mat-card>
+        <div class="pic">
+          <img  src= "{{movie.img}}" >
+        </div>
+          <a>remove</a>
+          <mat-card-title><h3>{{movie.title}}</h3><h5>{{movie.year}}</h5></mat-card-title>
+          <mat-card-content>
+              <p>{{movie.descrShort}}</p>
+          </mat-card-content>
+          <button (click) = onMovieClick(movie);>{{text}}</button>
+        </mat-card>
+   </div>
+  </div>
+
+ 
+ 
+<!--  
+ <div  flex="30" class="movie-card">
+ <div class="list-container">
+      <div class="cards-container" layout-wrap layout="row">
+         <mat-card>
+                  <img  src= "{{movie.img}}" >
+              <div class="button-row">
+                  <a>remove</a>
+              </div>
+                <mat-card-title><h3>{{movie.title}}</h3><h5>{{movie.year}}</h5></mat-card-title>
+              <mat-card-content>
+                <p>{{movie.descrShort}}</p>
+              </mat-card-content>
+            </mat-card>
+      </div>
+    </div>
+ </div> -->

@@ -1,0 +1,9 @@
+
+
+<!-- <app-filter [filter]="filterTerm" (filtering)="onFilterChanged($event)"></app-filter>
+<div class="filter-header" *ngIf="filterTerm?.length > 0">Filtering movies by title: {{ filterTerm }}</div> -->
+<div class="all-movies-continer">
+<mat-card *ngFor="let movie of allMovies ; let idx = index" class="movie-card">
+    <app-movie [movie]="movie" [text]="text" (movieChosen)="onMovieClick($event)" ></app-movie>
+</mat-card>
+</div>
