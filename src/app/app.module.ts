@@ -8,9 +8,11 @@ import { AllMoviesComponent } from './all-movies/all-movies.component';
 import { MovieComponent } from './movie/movie.component';
 import { FilterComponent } from './filter/filter.component';
 import { BudgetComponent } from './budget/budget.component';
+//services
 import { MoviesService } from './movies.service'
-import { FormsModule } from '@angular/forms';
+import { UsersService } from './users.service'
 
+import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -39,7 +41,7 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [MoviesService],
+  providers: [MoviesService,UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
