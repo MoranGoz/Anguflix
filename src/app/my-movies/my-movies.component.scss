@@ -4,11 +4,8 @@ mat-card{
     float: left;
    
 }
-*{
-   
-    min-height: 200px;
-}
-p{
+
+.p{
     font-size: 40px;
     font-family: 'Mogra', cursive;
     text-align: center;
@@ -16,4 +13,7 @@ p{
     background-color: #00b8d4;
      border : dashed 5px;
     border-color: whitesmoke;
+}
+.line{
+    width:100%;   
 }

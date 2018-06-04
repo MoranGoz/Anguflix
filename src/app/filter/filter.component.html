@@ -1,11 +1,15 @@
-<p>
-  filter works!
-  {{filter}}
-</p>
 <mat-form-field>
-    <input matInput [(ngModel)]="filter" (ngModelChange)="onFilterChanged()" placeholder="Filter movies by name..." />
+    <input matInput [(ngModel)]="filterObj.filterString" (ngModelChange)="onFilterChanged(filterObj)" placeholder="Filter movies by name..." />
 </mat-form-field>
-<i class="fa fa-trash" aria-hidden="true"></i>
+<br>
+    <select [(ngModel)]="filterObj.filterByYear" placeholder="Filter movies by year"  (ngModelChange)="onFilterChanged(filterObj)">
+        <option default value>Any Year</option>  
+        <option value="1991">1991</option>
+        <option value="1999">1999</option>
+        <option value="1994">1994</option>
+        <option value="1963">1963</option>
+        <option value="2016">2016</option>        
+      </select> 
+
 <br>
 
- 

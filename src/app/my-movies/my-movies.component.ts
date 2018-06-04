@@ -11,8 +11,9 @@ import {Movie} from '../movie'
 export class MyMoviesComponent implements OnInit {
 
   myMovies = new Array<Movie>();
-  filterTerm:string;
   text: string = "Remove" ;
+  filterObj = {filterString:""};
+  
 
   constructor(private moviesServis : MoviesService) { }
 
@@ -25,9 +26,8 @@ export class MyMoviesComponent implements OnInit {
     this.moviesServis.removeFromMyMovies(movie);
   }
 
-  onFilterChanged(data) {
-    console.log(data)
-    // this.router.navigate(['.'], { queryParams: { name: this.filterTerm }});
+  onFilterChanged(filterObj) {
+    this.filterObj = filterObj;
   }
 
 

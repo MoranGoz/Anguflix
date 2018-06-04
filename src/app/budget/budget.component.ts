@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { UsersService } from '../users.service'
+import { Budget } from '../budget'
 
 @Component({
   selector: 'app-budget',
@@ -6,21 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./budget.component.scss']
 })
 export class BudgetComponent implements OnInit {
- budget:number=100;
+ 
+ budget :Budget = new Budget();
 
  //@Input() price: number ;
  //@Output() filtering : EventEmitter<string> = new EventEmitter();
 
-  constructor() { }
+  constructor(private usersServis : UsersService) { }
 
   ngOnInit() {
+    this.budget = this.usersServis.getBudget();
   }
 
-  updatePurchase(){
-
-  }
-
-  returnPurchase(){
-
-  }
+ 
 }

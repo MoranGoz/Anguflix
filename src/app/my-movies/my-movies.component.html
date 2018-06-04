@@ -1,13 +1,13 @@
 
 <div class="all-movies-continer">
+  <h1> My Collection</h1>
+  <p class="line" ></p>
   <div *ngIf="myMovies.length == 0">
     <p class="p" >Select movies from below to add to your collection</p>
   </div>
-
-  <!-- <app-filter [filter]="filterTerm" (filtering)="onFilterChanged($event)"></app-filter> -->  
-  <!-- <div class="filter-header" *ngIf="filterTerm?.length > 0">Filtering movies by name: {{ filterTerm }}</div> -->
-  <mat-card flex="30" *ngFor="let movie of myMovies ; let idx = index" class="movie-card">
+    <app-filter  (filtering)="onFilterChanged($event)"></app-filter>
+  <mat-card flex="30" *ngFor="let movie of myMovies | custompipe : filterObj ; let idx = index" class="movie-card">
       <app-movie [movie]="movie" [text]="text" (movieChosen)="onMovieClick($event)" ></app-movie>
-    </mat-card>
+  </mat-card>
 </div>
  

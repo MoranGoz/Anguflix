@@ -10,18 +10,22 @@ import {Movie} from '../movie'
 export class AllMoviesComponent implements OnInit {
 
   allMovies = new Array<Movie>();
-  filterTerm : string;
   text : string = " Buy "
-
+  filterObj = {
+    filterString: "",
+    filterByYear: null
+  };
+  
   constructor(private moviesServis : MoviesService) { }
 
   ngOnInit() {
     this.allMovies =  this.moviesServis.getAllMovies();
   }
 
-  // onFilterChanged() {
-  //   this.router.navigate(['.'], { queryParams: { name: this.filterTerm }});
-  // }
+  onFilterChanged(filterObj) {
+    console.log('all movie recognize that filter chang  ' + filterObj.filterString);
+   
+  }
 
    onMovieClick(movie) {
     console.log(movie);
