@@ -2,10 +2,11 @@
 <div class="all-movies-continer">
   <h1> My Collection</h1>
   <p class="line" ></p>
+  <app-filter  (filtering)="onFilterChanged($event)"></app-filter>
+  <div class="line"></div>
   <div *ngIf="myMovies.length == 0">
     <p class="p" >Select movies from below to add to your collection</p>
   </div>
-    <app-filter  (filtering)="onFilterChanged($event)"></app-filter>
   <mat-card flex="30" *ngFor="let movie of myMovies | custompipe : filterObj ; let idx = index" class="movie-card">
       <app-movie [movie]="movie" [text]="text" (movieChosen)="onMovieClick($event)" ></app-movie>
   </mat-card>
