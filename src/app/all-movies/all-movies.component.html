@@ -1,10 +1,10 @@
 
 <div class="all-movies-continer">
     <h1> All Movies </h1>
-     <!-- <app-filter (filtering)="onFilterChanged($event)"></app-filter> -->
-
     <p class="line"></p>
-    <mat-card *ngFor="let movie of allMovies; let idx = index" class="movie-card">
+     <app-filter  (filtering)="onFilterChanged($event)"></app-filter>
+     <p class="line"></p>
+    <mat-card *ngFor="let movie of allMovies | custompipe : filterObj ; let idx = index" class="movie-card">
         <app-movie [movie]="movie" [text]="text" (movieChosen)="onMovieClick($event)"></app-movie>
     </mat-card>
 </div>

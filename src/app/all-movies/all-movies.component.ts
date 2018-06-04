@@ -23,8 +23,7 @@ export class AllMoviesComponent implements OnInit {
   }
 
   onFilterChanged(filterObj) {
-    console.log('all movie recognize that filter chang  ' + filterObj.filterString);
-   
+    this.filterObj = filterObj;
   }
 
    onMovieClick(movie) {
