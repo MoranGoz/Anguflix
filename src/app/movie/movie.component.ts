@@ -8,7 +8,6 @@ import {Movie} from '../movie'
   styleUrls: ['./movie.component.scss']
 })
 export class MovieComponent implements OnInit {
-  //filterTerm : string;
   @Input() text: string  = '';
   @Input() movie: Movie  = new Movie();
   @Output() movieChosen : EventEmitter<Movie> = new EventEmitter();

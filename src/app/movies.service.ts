@@ -50,5 +50,4 @@ export class MoviesService {
     console.log(MYMOVIES);
     this.usersServis.return(movie.price);
   }
- 
 }

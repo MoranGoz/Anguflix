@@ -8,9 +8,12 @@ import { AllMoviesComponent } from './all-movies/all-movies.component';
 import { MovieComponent } from './movie/movie.component';
 import { FilterComponent } from './filter/filter.component';
 import { BudgetComponent } from './budget/budget.component';
+
 //services
 import { MoviesService } from './movies.service'
 import { UsersService } from './users.service'
+
+
 
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -19,6 +22,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
+import { CustompipePipe } from './custompipe.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { HeaderComponent } from './header/header.component';
     MovieComponent,
     FilterComponent,
     BudgetComponent,
-    HeaderComponent
+    HeaderComponent,
+    CustompipePipe
   ],
   imports: [
     BrowserModule,
@@ -45,3 +50,5 @@ import { HeaderComponent } from './header/header.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
